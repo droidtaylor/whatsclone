@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+repositories {
+    google()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+android {
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.your_package_name"
+
+        resValue 'string', "app_name", "whatsclone"
+        resValue 'string', "support_email", "opuslabsin@gmail.com"
+        resValue 'string', "geo_api_key", ""
+        resValue 'string', "admob_app_id", ""
+        resValue 'string', "admob_banner_id", ""
+        resValue 'string', "sinch_app_key", ""
+        resValue 'string', "sinch_app_secret", ""
+        resValue 'string', "sinch_app_environment", "sandbox.sinch.com"
+        resValue 'string', "authority", applicationId + ".fileprovider"
+
+        resValue 'color', "colorPrimary", "#2196F3"
+        resValue 'color', "colorPrimaryDark", "#1976D2"
+        resValue 'color', "colorAccent", "#1A237E"
+
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 33
+        versionName "5.2.2"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation(name: 'sinch-android-rtc', version: '+', ext: 'aar')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation('com.googlecode.ez-vcard:ez-vcard:0.10.4') {
+        exclude group: 'org.freemarker'
+    }
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:customtabs:27.1.1'
+
+    implementation 'com.google.firebase:firebase-core:16.0.3'
+    implementation 'com.google.firebase:firebase-database:16.0.2'
+    implementation 'com.google.firebase:firebase-storage:16.0.2'
+    implementation 'com.google.firebase:firebase-ads:15.0.1'
+    implementation 'com.google.firebase:firebase-auth:16.0.3'
+    implementation 'com.google.firebase:firebase-messaging:17.3.2'
+    implementation 'com.google.android.gms:play-services-places:15.0.1'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.eyalbira.loadingdots:loading-dots:1.0.2'
+    implementation 'com.iceteck.silicompressorr:silicompressor:2.1'
+    implementation 'com.kbeanie:multipicker:1.5@aar'
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+    implementation 'com.vanniktech:emoji-google:0.5.1'
+    implementation 'com.mxn.soul:flowingdrawer-core:2.0.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+}
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/contactImage"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/ic_person_black_24dp" />
+
+    <TextView
+        android:id="@+id/contactName"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/close"
+        android:layout_toRightOf="@+id/contactImage"
+        android:gravity="center_vertical"
+        android:text="Aditi Chauhan"
+        android:textColor="@color/textColor0"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:src="@drawable/ic_message_24dp"
+        android:text="Close"
+        android:textSize="16sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/contactAdd"
+        android:layout_below="@+id/contactImage"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/contactAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/addToContactText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_person_add"
+            android:drawablePadding="16dp"
+            android:padding="16dp"
+            android:text="Add to contact"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

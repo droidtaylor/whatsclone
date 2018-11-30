@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="custom_tab_layout_height">56dp</dimen>
+    <dimen name="media_summary_strip">78dp</dimen>
+    <dimen name="media_summary_grid">96dp</dimen>
+    <dimen name="tab_indicator_height">5dp</dimen>
+    <dimen name="emoji_icon_size">28sp</dimen>
+</resources>

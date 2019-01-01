@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/userImage1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/whatsclone_placeholder"
+        android:tint="#99000000" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vertical_gradient" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:src="@drawable/whatsclone_logo" />
+
+    <TextView
+        android:id="@+id/whatsclone_calling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/voice_calling"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/userImage2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/whatsclone_calling"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/remoteUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userImage2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@android:color/white"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/callState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/remoteUser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/callDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/callState"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/answerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/round_green_pickup"
+            android:padding="16dp"
+            android:src="@drawable/ic_call_white_24dp" />
+
+        <ImageView
+            android:id="@+id/declineButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_red_hangup"
+            android:padding="16dp"
+            android:src="@drawable/ic_call_end_black_24dp" />
+    </LinearLayout>
+
+</RelativeLayout>

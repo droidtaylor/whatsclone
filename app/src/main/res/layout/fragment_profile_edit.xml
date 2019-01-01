@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="55">
+
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/vertical_gradient_black_reverse"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="18dp">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="1.3sp"
+                android:text="Enni Johnson"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/changeImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_camera_white" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/vertical_gradient_black">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@drawable/ic_keyboard_arrow_left_white_24dp" />
+
+            <ImageView
+                android:id="@+id/done"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_done_white" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="45"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="sans-serif-light"
+            android:letterSpacing="0.1"
+            android:lineSpacingExtra="6.7sp"
+            android:text="@string/name"
+            android:textColor="#b6b6b6"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/userNameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@null"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="0.05"
+            android:lineSpacingExtra="3.3sp"
+            android:text="a_man"
+            android:textColor="#727272"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="sans-serif-light"
+            android:letterSpacing="0.1"
+            android:lineSpacingExtra="6.7sp"
+            android:text="@string/status"
+            android:textColor="#b6b6b6"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/userStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@null"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="0.05"
+            android:lineSpacingExtra="3.3sp"
+            android:text="status..."
+            android:textColor="#727272"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+</LinearLayout>
